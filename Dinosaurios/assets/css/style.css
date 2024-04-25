@@ -1,0 +1,163 @@
+/* Estilos globales */
+body, html {
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+    height: 100%; /* Altura completa del viewport */
+    width: 100%; /* Ancho completo del viewport */
+    background-color: #000000; /* Fondo de color negro para todo el documento */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    font-family: 'Raleway', sans-serif; /* Aplica la fuente Raleway a todo el contenido */
+}
+
+/* Estilos para el rectángulo superior, actúa como cabecera */
+.rectangulo-superior {
+    position: fixed; /* Posición fija en la parte superior de la pantalla */
+    top: 0; /* Alineado en la parte superior */
+    left: 0; /* Alineado a la izquierda */
+    right: 0; /* Extiende el rectángulo hasta el borde derecho de la ventana */
+    width: 100%; /* Ajusta el ancho al 100% del viewport */
+    height: 73px; /* Altura fija de 73 píxeles */
+    background: #000000; /* Fondo negro */
+    opacity: 1; /* Opacidad completa */
+    display: flex; /* Usa Flexbox para centrar contenido */
+    justify-content: center; /* Centra contenido horizontalmente */
+    align-items: center; /* Centra contenido verticalmente */
+    color: white; /* Color del texto blanco */
+    z-index: 1000; /* Coloca el rectángulo sobre otros elementos */
+}
+
+/* Estilos para el texto dentro del rectángulo superior */
+.rectangulo-superior p {
+    margin: 0; /* No hay margen */
+    font-size: 24px; /* Tamaño de fuente de 24px */
+}
+
+/* Estilos para el contenedor central que alinea la imagen principal */
+.contenedor-central {
+    display: flex; /* Usa Flexbox para alinear elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: calc(100vh - 73px); /* Altura ajustada al alto de la ventana menos la cabecera */
+    margin-top: 73px; /* Desplazamiento superior igual a la altura de la cabecera */
+}
+
+/* Estilos para la imagen principal en el centro */
+.imagen-principal {
+    width: 80%; /* Ancho relativo al 80% de su contenedor */
+    height: 80%; /* Alto relativo al 80% de su contenedor */
+    background: transparent url('../img/imagen_4.png') center center no-repeat padding-box;
+    background-size: 35%; /* Tamaño de la imagen ajustado al 35% */
+    opacity: 1; /* Opacidad completa */
+}
+
+/* Estilos para el contenedor que incluye texto e imagen, usado más abajo en la página */
+.content-container {
+    position: absolute; /* Posición absoluta */
+    top: 800px; /* Posicionado 800px desde el top */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ancho completo del viewport */
+    height: 348px; /* Altura de 348px */
+    display: flex; /* Usa Flexbox para alinear contenido */
+    justify-content: center; /* Centra contenido horizontalmente */
+    align-items: center; /* Centra contenido verticalmente */
+    background: #000000; /* Fondo negro */
+    opacity: 1; /* Opacidad completa */
+}
+
+/* Estilos para el texto dentro del contenedor de contenido */
+.text-content {
+    margin: 0 20px; /* Margen horizontal de 20px para espaciado */
+    color: white; /* Texto blanco */
+    width: 20%; /* Ancho definido al 20% de su contenedor */
+}
+
+/* Estilos para la imagen a la derecha dentro del contenedor de contenido */
+.side-image {
+    width: 20%; /* Ancho fijado al 20% */
+    height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Estilos comunes para secciones que incluyen iconos y textos de características */
+.next-section, .features-container {
+    position: absolute; /* Posición absoluta para ubicación precisa */
+    top: 1141px; /* Posicionado a 1141px desde el top */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ancho al 100% del viewport */
+    height: 348px; /* Altura de 348px */
+    background: #1E1A13; /* Fondo oscuro */
+    opacity: 0.98; /* Ligeramente translúcido */
+    display: flex; /* Usa Flexbox para estructura interna */
+    flex-direction: column; /* Elementos organizados en columna */
+    align-items: center; /* Centra elementos verticalmente */
+    justify-content: center; /* Centra contenido horizontalmente */
+}
+
+/* Estilos específicos para títulos dentro de las secciones de características */
+.next-section h2, .features-container h2 {
+    color: white; /* Texto blanco */
+    font-size: 40px; /* Tamaño de fuente grande para visibilidad */
+    margin-bottom: 50px; /* Margen inferior para separar del contenido siguiente */
+}
+
+/* Contenedores para íconos, distribuyendo espacio uniformemente */
+.icons-container, .icon-group {
+    display: flex; /* Flexbox para distribución */
+    justify-content: space-around; /* Espacio distribuido uniformemente entre íconos */
+    width: 60%; /* Ancho del contenedor de íconos al 60% de su contenedor padre */
+}
+
+/* Estilos para íconos y descripciones */
+.icons-container i, .icon-item i {
+    font-size: 50px; /* Tamaño de los íconos grande para enfatizar */
+    color: white; /* Íconos en blanco para contraste */
+}
+
+/* Estilos para elementos individuales de íconos, alineando texto debajo */
+.icon-item {
+    display: flex; /* Flexbox para estructura interna */
+    flex-direction: column; /* Elementos organizados verticalmente */
+    align-items: center; /* Alineación central de contenido */
+}
+
+/* Estilos para texto debajo de cada ícono, centrado y claro */
+.icon-item p {
+    margin-top: 15px; /* Espacio entre ícono y texto */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Texto centrado */
+}
+
+/* Estilos para el contenedor de imágenes agrupadas, alineado centralmente */
+.image-group-container {
+    position: absolute; /* Posición absoluta */
+    top: 1490px; /* Posicionado a 1490px desde el top */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ancho al 100% del viewport */
+    height: 348px; /* Altura de 348px */
+    display: flex; /* Flexbox para alinear imágenes */
+    justify-content: center; /* Centra imágenes horizontalmente */
+    align-items: center; /* Centra imágenes verticalmente */
+    background: #000000; /* Fondo negro */
+}
+
+/* Estilos para cada imagen dentro del grupo */
+.grouped-image {
+    width: 300px; /* Ancho fijado a 300px */
+    height: auto; /* Altura ajustada automáticamente para mantener proporción */
+    margin: 0 20px; /* Margen entre imágenes */
+}
+
+/* Estilos para el footer, posicionado al final de la página */
+.page-footer {
+    position: absolute; /* Posición absoluta para ubicación precisa */
+    top: 1835px; /* Posicionado a 1835px desde el top */
+    left: 0; /* Alineado a la izquierda */
+    width: 100%; /* Ancho al 100% del viewport */
+    height: 102px; /* Altura de 102px */
+    background: #1E1A13; /* Fondo oscuro */
+    opacity: 0.94; /* Ligeramente translúcido */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra contenido horizontalmente */
+    align-items: center; /* Centra contenido verticalmente */
+    color: white; /* Texto en blanco */
+    font-size: 16px; /* Tamaño de texto adecuado para el footer */
+}
